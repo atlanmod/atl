@@ -1,0 +1,16 @@
+os: linux
+sudo: false
+dist: trusty
+
+language: java
+jdk: oraclejdk8
+
+cache:
+    directories:
+        - '$HOME/.m2/repository'
+
+script:
+    - mvn -B -V -q -f ./releng/org.eclipse.m2m.atl.releng.parent/pom.xml  -P 2018-12 package
+
+after_success:
+#DEPLOYMENT SCRIPTS
