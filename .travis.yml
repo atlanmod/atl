@@ -10,7 +10,7 @@ cache:
         - '$HOME/.m2/repository'
 
 script:
-    - mvn -B -V -q -f ./releng/org.eclipse.m2m.atl.releng.parent/pom.xml  -P 2018-12 package
+    - mvn -B -V -q -f ./releng/org.eclipse.m2m.atl.releng.parent/pom.xml  -P photon package
 
 after_success:
 #DEPLOYMENT SCRIPTS
