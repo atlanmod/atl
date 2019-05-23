@@ -13,7 +13,7 @@ install:
     - mvn --batch-mode --show-version --quiet --define skipTests --update-snapshots --file ./releng/org.eclipse.m2m.atl.releng.parent/pom.xml --activate-profiles photon install
 
 script:
-    - mvn -B -V -q -f ./releng/org.eclipse.m2m.atl.releng.parent/pom.xml  -P photon package site
+    - mvn -B -V -q -f ./releng/org.eclipse.m2m.atl.releng.parent/pom.xml  -P photon package
 
 after_success:
 #DEPLOYMENT SCRIPTS
